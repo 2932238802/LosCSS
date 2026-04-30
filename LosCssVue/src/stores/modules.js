@@ -1,0 +1,259 @@
+export const modules = {
+  seedSources: {
+    title: '种源管理',
+    description: '管理种源编号、品种、来源、质检报告、供应商与状态。',
+    baseApi: '/seed-sources',
+    idField: 'id',
+    defaultForm: {
+      id: null,
+      sourceCode: '',
+      sourceName: '',
+      sourceType: '野生种源',
+      varietyName: '',
+      geographicIndication: '',
+      introductionDate: new Date().toISOString().slice(0, 10),
+      quantity: 0,
+      unit: '公斤',
+      qualityGrade: '一级',
+      quarantineReport: '',
+      qualityReport: '',
+      suitableArea: '',
+      storageCondition: '',
+      supplierName: '',
+      supplierContact: '',
+      status: '启用',
+      remark: ''
+    },
+    columns: [
+      { label: '种源编号', field: 'sourceCode' },
+      { label: '种源名称', field: 'sourceName' },
+      { label: '种源类型', field: 'sourceType' },
+      { label: '品种名称', field: 'varietyName' },
+      { label: '数量', field: 'quantity' },
+      { label: '单位', field: 'unit' },
+      { label: '状态', field: 'status' }
+    ],
+    fields: [
+      { label: '种源编号', field: 'sourceCode', required: true },
+      { label: '种源名称', field: 'sourceName', required: true },
+      { label: '种源类型', field: 'sourceType', type: 'select', required: true, options: ['野生种源', '栽培种源', '组培种源'] },
+      { label: '品种名称', field: 'varietyName', required: true },
+      { label: '地理标志', field: 'geographicIndication' },
+      { label: '引种日期', field: 'introductionDate', type: 'date', required: true },
+      { label: '数量', field: 'quantity', type: 'number', required: true },
+      { label: '单位', field: 'unit', type: 'select', required: true, options: ['公斤', '株', '克'] },
+      { label: '质量等级', field: 'qualityGrade', type: 'select', required: true, options: ['特级', '一级', '二级', '三级'] },
+      { label: '检疫报告', field: 'quarantineReport' },
+      { label: '质检报告', field: 'qualityReport', type: 'textarea' },
+      { label: '适宜种植区域', field: 'suitableArea' },
+      { label: '存储条件', field: 'storageCondition' },
+      { label: '供应商名称', field: 'supplierName' },
+      { label: '供应商联系方式', field: 'supplierContact' },
+      { label: '状态', field: 'status', type: 'select', required: true, options: ['启用', '停用', '待审核'] },
+      { label: '备注', field: 'remark', type: 'textarea' }
+    ]
+  },
+  seedlings: {
+    title: '育苗管理',
+    description: '管理种源育苗、发芽率、生长状态、育苗时间、方法和环境参数。',
+    baseApi: '/seedlings',
+    idField: 'id',
+    defaultForm: {
+      id: null,
+      seedId: null,
+      germinationRate: null,
+      growthStatus: '准备中',
+      plantDate: new Date().toISOString().slice(0, 10),
+      startTime: '',
+      endTime: '',
+      method: '',
+      environmentParams: '',
+      operator: ''
+    },
+    columns: [
+      { label: 'ID', field: 'id' },
+      { label: '种源ID', field: 'seedId' },
+      { label: '发芽率', field: 'germinationRate' },
+      { label: '生长状态', field: 'growthStatus' },
+      { label: '种植日期', field: 'plantDate' },
+      { label: '操作者', field: 'operator' }
+    ],
+    fields: [
+      { label: '种源ID', field: 'seedId', type: 'number', required: true },
+      { label: '发芽率', field: 'germinationRate', type: 'number' },
+      { label: '生长状态', field: 'growthStatus', type: 'select', required: true, options: ['准备中', '育苗中', '完成'] },
+      { label: '种植日期', field: 'plantDate', type: 'date', required: true },
+      { label: '育苗开始时间', field: 'startTime', type: 'datetime-local' },
+      { label: '育苗结束时间', field: 'endTime', type: 'datetime-local' },
+      { label: '育苗方法', field: 'method' },
+      { label: '环境参数', field: 'environmentParams', type: 'textarea' },
+      { label: '操作者', field: 'operator' }
+    ]
+  },
+  plantingAreas: {
+    title: '种植地块管理',
+    description: '管理地块名称、土壤类型、面积、位置、状态与描述。',
+    baseApi: '/planting-areas',
+    idField: 'id',
+    defaultForm: { id: null, areaName: '', soilType: '壤土', size: 0, location: '', status: '空闲', description: '' },
+    columns: [
+      { label: '地块名称', field: 'areaName' },
+      { label: '土壤类型', field: 'soilType' },
+      { label: '面积(亩)', field: 'size' },
+      { label: '位置', field: 'location' },
+      { label: '状态', field: 'status' }
+    ],
+    fields: [
+      { label: '地块名称', field: 'areaName', required: true },
+      { label: '土壤类型', field: 'soilType', type: 'select', required: true, options: ['沙土', '壤土', '粘土'] },
+      { label: '面积(亩)', field: 'size', type: 'number', required: true },
+      { label: '地理位置', field: 'location', required: true },
+      { label: '地块状态', field: 'status', type: 'select', required: true, options: ['空闲', '种植中', '休耕'] },
+      { label: '描述', field: 'description', type: 'textarea' }
+    ]
+  },
+  farmingOperations: {
+    title: '农事操作管理',
+    description: '管理施肥、灌溉、除草、病虫害防治等农事操作记录。',
+    baseApi: '/farming-operations',
+    idField: 'id',
+    defaultForm: { id: null, areaId: null, operationType: '施肥', operationDate: new Date().toISOString().slice(0, 10), operatorId: null, materialUsed: '', status: '计划中', resultDescription: '', reviewStatus: '待审核' },
+    columns: [
+      { label: '地块ID', field: 'areaId' },
+      { label: '操作类型', field: 'operationType' },
+      { label: '操作日期', field: 'operationDate' },
+      { label: '操作人员', field: 'operatorId' },
+      { label: '操作状态', field: 'status' },
+      { label: '审核状态', field: 'reviewStatus' }
+    ],
+    fields: [
+      { label: '关联地块ID', field: 'areaId', type: 'number', required: true },
+      { label: '操作类型', field: 'operationType', type: 'select', required: true, options: ['施肥', '灌溉', '除草', '病虫害防治'] },
+      { label: '操作日期', field: 'operationDate', type: 'date', required: true },
+      { label: '操作人员ID', field: 'operatorId', type: 'number', required: true },
+      { label: '使用农资', field: 'materialUsed', type: 'textarea' },
+      { label: '操作状态', field: 'status', type: 'select', required: true, options: ['计划中', '进行中', '已完成', '已取消'] },
+      { label: '操作结果', field: 'resultDescription', type: 'textarea' },
+      { label: '审核状态', field: 'reviewStatus', type: 'select', required: true, options: ['待审核', '已通过', '需修正'] }
+    ]
+  },
+  harvests: {
+    title: '采收管理',
+    description: '管理采收批次、地块、产量、质量、负责人、仓储与质检状态。',
+    baseApi: '/harvests',
+    idField: 'id',
+    defaultForm: { id: null, areaId: null, harvestDate: new Date().toISOString().slice(0, 10), batchNumber: '', outputQuantity: 0, qualityLevel: '优', responsiblePerson: '', harvestMethod: '人工采收', storageLocation: '', inspectionStatus: '待检', remarks: '' },
+    columns: [
+      { label: '批次号', field: 'batchNumber' },
+      { label: '采收日期', field: 'harvestDate' },
+      { label: '地块ID', field: 'areaId' },
+      { label: '数量(kg)', field: 'outputQuantity' },
+      { label: '质量', field: 'qualityLevel' },
+      { label: '负责人', field: 'responsiblePerson' },
+      { label: '质检状态', field: 'inspectionStatus' }
+    ],
+    fields: [
+      { label: '种植地块ID', field: 'areaId', type: 'number', required: true },
+      { label: '采收日期', field: 'harvestDate', type: 'date', required: true },
+      { label: '批次号', field: 'batchNumber', required: true },
+      { label: '采收数量(kg)', field: 'outputQuantity', type: 'number', required: true },
+      { label: '采收质量', field: 'qualityLevel', type: 'select', required: true, options: ['优', '良', '合格'] },
+      { label: '负责人', field: 'responsiblePerson', required: true },
+      { label: '采收方式', field: 'harvestMethod', type: 'select', required: true, options: ['人工采收', '机械采收'] },
+      { label: '存储仓库', field: 'storageLocation', required: true },
+      { label: '质检状态', field: 'inspectionStatus', type: 'select', required: true, options: ['待检', '已检合格', '已检不合格'] },
+      { label: '备注', field: 'remarks', type: 'textarea' }
+    ]
+  },
+  rawMaterialIns: {
+    title: '原料入库管理',
+    description: '管理原料类型、入库批次、供应商、数量、仓库位置和入库状态。',
+    baseApi: '/raw-material-ins',
+    idField: 'id',
+    defaultForm: { id: null, materialType: '鲜品', batchNumber: '', supplierName: '', inDate: new Date().toISOString().slice(0, 10), quantity: 0, unit: '公斤', qualityLevel: '一级', storageLocation: '', inspectionNo: '', status: '待检', operator: '' },
+    columns: [
+      { label: '原料类型', field: 'materialType' },
+      { label: '批次号', field: 'batchNumber' },
+      { label: '供应商', field: 'supplierName' },
+      { label: '入库日期', field: 'inDate' },
+      { label: '数量', field: 'quantity' },
+      { label: '质量等级', field: 'qualityLevel' },
+      { label: '仓库位置', field: 'storageLocation' },
+      { label: '状态', field: 'status' }
+    ],
+    fields: [
+      { label: '原料类型', field: 'materialType', type: 'select', required: true, options: ['鲜品', '干品', '切片'] },
+      { label: '入库批次号', field: 'batchNumber', required: true },
+      { label: '供应商名称', field: 'supplierName', required: true },
+      { label: '入库日期', field: 'inDate', type: 'date', required: true },
+      { label: '入库数量', field: 'quantity', type: 'number', required: true },
+      { label: '计量单位', field: 'unit', required: true },
+      { label: '质量等级', field: 'qualityLevel', type: 'select', required: true, options: ['特级', '一级', '二级'] },
+      { label: '仓库位置', field: 'storageLocation', required: true },
+      { label: '检验报告编号', field: 'inspectionNo' },
+      { label: '入库状态', field: 'status', type: 'select', required: true, options: ['待检', '合格', '待处理'] },
+      { label: '操作人员', field: 'operator', required: true }
+    ]
+  },
+  processingFlows: {
+    title: '加工流程管理',
+    description: '管理清洗、蒸制、干燥、切片、包装等加工流程。',
+    baseApi: '/processing-flows',
+    idField: 'id',
+    defaultForm: { id: null, flowName: '', flowType: '清洗', deviceId: null, operator: '', startTime: '', endTime: '', percentComplete: 0, standardHours: 0, actualHours: null, status: '未开始' },
+    columns: [
+      { label: '流程名称', field: 'flowName' },
+      { label: '流程类型', field: 'flowType' },
+      { label: '加工设备', field: 'deviceId' },
+      { label: '负责人', field: 'operator' },
+      { label: '进度', field: 'percentComplete' },
+      { label: '状态', field: 'status' }
+    ],
+    fields: [
+      { label: '流程名称', field: 'flowName', required: true },
+      { label: '流程类型', field: 'flowType', type: 'select', required: true, options: ['清洗', '蒸制', '干燥', '切片', '包装'] },
+      { label: '加工设备ID', field: 'deviceId', type: 'number', required: true },
+      { label: '负责人', field: 'operator', required: true },
+      { label: '开始时间', field: 'startTime', type: 'datetime-local' },
+      { label: '结束时间', field: 'endTime', type: 'datetime-local' },
+      { label: '当前进度(%)', field: 'percentComplete', type: 'number', required: true },
+      { label: '标准工时(小时)', field: 'standardHours', type: 'number', required: true },
+      { label: '实际工时(小时)', field: 'actualHours', type: 'number' },
+      { label: '流程状态', field: 'status', type: 'select', required: true, options: ['未开始', '进行中', '已暂停', '已完成'] }
+    ]
+  },
+  qualityChecks: {
+    title: '质检管理',
+    description: '管理产品质检记录、检验结果、质量问题、报告和检验状态。',
+    baseApi: '/quality-checks',
+    idField: 'id',
+    defaultForm: { id: null, productId: '', checkDate: new Date().toISOString().slice(0, 10), result: '合格', issue: '', inspector: '', method: '感官检验', batchNumber: '', productionDate: new Date().toISOString().slice(0, 10), reportData: '', checkStatus: '待检验' },
+    columns: [
+      { label: '产品编号', field: 'productId' },
+      { label: '检验日期', field: 'checkDate' },
+      { label: '检验结果', field: 'result' },
+      { label: '检验状态', field: 'checkStatus' },
+      { label: '检验人员', field: 'inspector' },
+      { label: '批次号', field: 'batchNumber' }
+    ],
+    fields: [
+      { label: '产品编号', field: 'productId', required: true },
+      { label: '检验日期', field: 'checkDate', type: 'date', required: true },
+      { label: '检验结果', field: 'result', type: 'select', required: true, options: ['合格', '不合格', '待复核'] },
+      { label: '质量问题', field: 'issue' },
+      { label: '检验人员', field: 'inspector', required: true },
+      { label: '检验方法', field: 'method', type: 'select', required: true, options: ['感官检验', '理化检验', '微生物检验'] },
+      { label: '批次号', field: 'batchNumber', required: true },
+      { label: '生产日期', field: 'productionDate', type: 'date', required: true },
+      { label: '检验状态', field: 'checkStatus', type: 'select', required: true, options: ['待检验', '检验中', '已完成'] },
+      { label: '检验报告', field: 'reportData', type: 'textarea' }
+    ]
+  }
+};
+
+export const moduleMenus = Object.entries(modules).map(([key, value]) => ({
+  key,
+  title: value.title,
+  description: value.description,
+  path: `/${key.replace(/[A-Z]/g, m => '-' + m.toLowerCase())}`
+}));
