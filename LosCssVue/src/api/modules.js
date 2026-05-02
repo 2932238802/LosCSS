@@ -1,5 +1,11 @@
 import request from './request'
 
+/**
+ * createCrudApi 
+ * 
+ * @param {*} baseUrl 
+ * @returns 
+ */
 export function createCrudApi(baseUrl) {
   return {
     list(params) {

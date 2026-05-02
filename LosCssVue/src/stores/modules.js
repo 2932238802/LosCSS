@@ -1,8 +1,21 @@
+
+/**
+ * modules
+ * - 每一个modules
+ *  - title
+ *  - description
+ *  - 
+ */
+
+
 export const modules = {
+  /**
+   * seedSources
+   */
   seedSources: {
     title: '种源管理',
-    description: '管理种源编号、品种、来源、质检报告、供应商与状态。',
-    baseApi: '/seed-sources',
+    description: '管理种源编号、品种、来源、质检报告、供应商与状态',
+    baseApi: '/seed_sources',
     idField: 'id',
     defaultForm: {
       id: null,
@@ -53,9 +66,15 @@ export const modules = {
       { label: '备注', field: 'remark', type: 'textarea' }
     ]
   },
+
+
+
+  /**
+   * 
+   */
   seedlings: {
     title: '育苗管理',
-    description: '管理种源育苗、发芽率、生长状态、育苗时间、方法和环境参数。',
+    description: '管理种源育苗、发芽率、生长状态、育苗时间、方法和环境参数',
     baseApi: '/seedlings',
     idField: 'id',
     defaultForm: {
@@ -92,7 +111,7 @@ export const modules = {
   },
   plantingAreas: {
     title: '种植地块管理',
-    description: '管理地块名称、土壤类型、面积、位置、状态与描述。',
+    description: '管理地块名称、土壤类型、面积、位置、状态与描述',
     baseApi: '/planting-areas',
     idField: 'id',
     defaultForm: { id: null, areaName: '', soilType: '壤土', size: 0, location: '', status: '空闲', description: '' },
@@ -114,7 +133,7 @@ export const modules = {
   },
   farmingOperations: {
     title: '农事操作管理',
-    description: '管理施肥、灌溉、除草、病虫害防治等农事操作记录。',
+    description: '管理施肥、灌溉、除草、病虫害防治等农事操作记录',
     baseApi: '/farming-operations',
     idField: 'id',
     defaultForm: { id: null, areaId: null, operationType: '施肥', operationDate: new Date().toISOString().slice(0, 10), operatorId: null, materialUsed: '', status: '计划中', resultDescription: '', reviewStatus: '待审核' },
@@ -139,7 +158,7 @@ export const modules = {
   },
   harvests: {
     title: '采收管理',
-    description: '管理采收批次、地块、产量、质量、负责人、仓储与质检状态。',
+    description: '管理采收批次、地块、产量、质量、负责人、仓储与质检状态',
     baseApi: '/harvests',
     idField: 'id',
     defaultForm: { id: null, areaId: null, harvestDate: new Date().toISOString().slice(0, 10), batchNumber: '', outputQuantity: 0, qualityLevel: '优', responsiblePerson: '', harvestMethod: '人工采收', storageLocation: '', inspectionStatus: '待检', remarks: '' },
@@ -167,7 +186,7 @@ export const modules = {
   },
   rawMaterialIns: {
     title: '原料入库管理',
-    description: '管理原料类型、入库批次、供应商、数量、仓库位置和入库状态。',
+    description: '管理原料类型、入库批次、供应商、数量、仓库位置和入库状态',
     baseApi: '/raw-material-ins',
     idField: 'id',
     defaultForm: { id: null, materialType: '鲜品', batchNumber: '', supplierName: '', inDate: new Date().toISOString().slice(0, 10), quantity: 0, unit: '公斤', qualityLevel: '一级', storageLocation: '', inspectionNo: '', status: '待检', operator: '' },
@@ -197,7 +216,7 @@ export const modules = {
   },
   processingFlows: {
     title: '加工流程管理',
-    description: '管理清洗、蒸制、干燥、切片、包装等加工流程。',
+    description: '管理清洗、蒸制、干燥、切片、包装等加工流程',
     baseApi: '/processing-flows',
     idField: 'id',
     defaultForm: { id: null, flowName: '', flowType: '清洗', deviceId: null, operator: '', startTime: '', endTime: '', percentComplete: 0, standardHours: 0, actualHours: null, status: '未开始' },
@@ -222,12 +241,26 @@ export const modules = {
       { label: '流程状态', field: 'status', type: 'select', required: true, options: ['未开始', '进行中', '已暂停', '已完成'] }
     ]
   },
+
   qualityChecks: {
     title: '质检管理',
-    description: '管理产品质检记录、检验结果、质量问题、报告和检验状态。',
+    description: '管理产品质检记录、检验结果、质量问题、报告和检验状态',
     baseApi: '/quality-checks',
     idField: 'id',
-    defaultForm: { id: null, productId: '', checkDate: new Date().toISOString().slice(0, 10), result: '合格', issue: '', inspector: '', method: '感官检验', batchNumber: '', productionDate: new Date().toISOString().slice(0, 10), reportData: '', checkStatus: '待检验' },
+    defaultForm: 
+    { 
+      id: null, 
+      productId: '', 
+      checkDate: 
+      new Date().toISOString().slice(0, 10), 
+      result: '合格', issue: '', 
+      inspector: '', 
+      method: '感官检验', 
+      batchNumber: '', 
+      productionDate: new Date().toISOString().slice(0, 10), 
+      reportData: '', 
+      checkStatus: '待检验' 
+    },
     columns: [
       { label: '产品编号', field: 'productId' },
       { label: '检验日期', field: 'checkDate' },

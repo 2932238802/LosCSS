@@ -20,6 +20,6 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router';
-import { moduleMenus as menus } from '../stores/modules';
+import { RouterLink } from "vue-router";
+import { moduleMenus as menus } from "../stores/modules";
 </script>

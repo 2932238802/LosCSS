@@ -21,13 +21,6 @@
     </aside>
 
     <main class="main-content">
-      <header class="page-header">
-        <div>
-          <h2>{{ currentTitle }}</h2>
-          <p>{{ currentDescription }}</p>
-        </div>
-      </header>
-
       <section class="page-body">
         <RouterView />
       </section>
