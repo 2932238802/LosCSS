@@ -8,6 +8,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(drogon CONFIG REQUIRED)
 
+
 file(
     GLOB SRC_FILES
     main.cc

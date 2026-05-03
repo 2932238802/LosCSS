@@ -1,0 +1,15 @@
+{
+    "rdbms": "postgresql",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dbname": "los_css_drogon",
+    "user": "postgres",
+    "passwd": "lsj",
+    "tables": ["seed_sources"],
+    "relationships": {
+        "enabled": false
+    },
+    "restful_api_controllers": {
+        "enabled": false
+    }
+}

@@ -12,9 +12,9 @@
         "rdbms": "postgresql",
         "host": "127.0.0.1",
         "port": 5432,
-        "dbname": "agri_system",
+        "dbname": "los_css_drogon",
         "user": "postgres",
-        "passwd": "",
+        "passwd": "lsj",
         "connection_number": 5
     }
   ]
