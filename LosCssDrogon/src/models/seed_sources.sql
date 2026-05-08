@@ -54,7 +54,6 @@ FOR EACH ROW
 EXECUTE FUNCTION touch_updated_at();
 
 
-
 COMMENT ON TABLE  seed_sources IS                       '种源管理表';
 COMMENT ON COLUMN seed_sources.id IS                    '主键ID';
 COMMENT ON COLUMN seed_sources.source_code IS           '种源编号（业务唯一标识）';
