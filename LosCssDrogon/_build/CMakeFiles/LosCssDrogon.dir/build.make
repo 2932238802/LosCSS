@@ -69,10 +69,38 @@ include CMakeFiles/LosCssDrogon.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/LosCssDrogon.dir/flags.make
 
+CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o: CMakeFiles/LosCssDrogon.dir/flags.make
+CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o: /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/HealthController/HealthController.cc
+CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o: CMakeFiles/LosCssDrogon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o -MF CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o.d -o CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/HealthController/HealthController.cc
+
+CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/HealthController/HealthController.cc > CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.i
+
+CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/HealthController/HealthController.cc -o CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.s
+
+CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o: CMakeFiles/LosCssDrogon.dir/flags.make
+CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o: /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/core/LosResponse/LosResponse.cc
+CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o: CMakeFiles/LosCssDrogon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o -MF CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o.d -o CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/core/LosResponse/LosResponse.cc
+
+CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/core/LosResponse/LosResponse.cc > CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.i
+
+CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/core/LosResponse/LosResponse.cc -o CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.s
+
 CMakeFiles/LosCssDrogon.dir/src/main.cc.o: CMakeFiles/LosCssDrogon.dir/flags.make
 CMakeFiles/LosCssDrogon.dir/src/main.cc.o: /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/main.cc
 CMakeFiles/LosCssDrogon.dir/src/main.cc.o: CMakeFiles/LosCssDrogon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LosCssDrogon.dir/src/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LosCssDrogon.dir/src/main.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LosCssDrogon.dir/src/main.cc.o -MF CMakeFiles/LosCssDrogon.dir/src/main.cc.o.d -o CMakeFiles/LosCssDrogon.dir/src/main.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/main.cc
 
 CMakeFiles/LosCssDrogon.dir/src/main.cc.i: cmake_force
@@ -85,11 +113,15 @@ CMakeFiles/LosCssDrogon.dir/src/main.cc.s: cmake_force
 
 # Object files for target LosCssDrogon
 LosCssDrogon_OBJECTS = \
+"CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o" \
+"CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o" \
 "CMakeFiles/LosCssDrogon.dir/src/main.cc.o"
 
 # External object files for target LosCssDrogon
 LosCssDrogon_EXTERNAL_OBJECTS =
 
+LosCssDrogon: CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o
+LosCssDrogon: CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o
 LosCssDrogon: CMakeFiles/LosCssDrogon.dir/src/main.cc.o
 LosCssDrogon: CMakeFiles/LosCssDrogon.dir/build.make
 LosCssDrogon: /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/libdrogon.a
@@ -108,7 +140,7 @@ LosCssDrogon: /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/
 LosCssDrogon: /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/libhiredisd.a
 LosCssDrogon: /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/libz.a
 LosCssDrogon: CMakeFiles/LosCssDrogon.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable LosCssDrogon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable LosCssDrogon"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LosCssDrogon.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -360,13 +360,13 @@ c-ares_DIR:PATH=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/shar
 hiredis_DIR:PATH=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/share/hiredis
 
 //Path to a library.
-pkgcfg_lib__OPENSSL_crypto:FILEPATH=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/libcrypto.a
+pkgcfg_lib__OPENSSL_crypto:FILEPATH=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/libcrypto.a
 
 //Path to a library.
 pkgcfg_lib__OPENSSL_dl:FILEPATH=/usr/lib/x86_64-linux-gnu/libdl.a
 
 //Path to a library.
-pkgcfg_lib__OPENSSL_ssl:FILEPATH=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/libssl.a
+pkgcfg_lib__OPENSSL_ssl:FILEPATH=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/libssl.a
 
 
 ########################
@@ -578,32 +578,32 @@ _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 _CXX_FILESYSTEM_HAVE_HEADER-ADVANCED:INTERNAL=1
 //Have include filesystem
 _CXX_FILESYSTEM_HAVE_HEADER:INTERNAL=1
-_OPENSSL_CFLAGS:INTERNAL=-I/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../include
+_OPENSSL_CFLAGS:INTERNAL=-I/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
 _OPENSSL_CFLAGS_I:INTERNAL=
 _OPENSSL_CFLAGS_OTHER:INTERNAL=
 _OPENSSL_FOUND:INTERNAL=1
-_OPENSSL_INCLUDEDIR:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../include
-_OPENSSL_INCLUDE_DIRS:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../include
-_OPENSSL_LDFLAGS:INTERNAL=-L/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../lib;-lssl;-lcrypto;-ldl;-pthread
+_OPENSSL_INCLUDEDIR:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+_OPENSSL_INCLUDE_DIRS:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+_OPENSSL_LDFLAGS:INTERNAL=-L/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib;-lssl;-lcrypto;-ldl;-pthread
 _OPENSSL_LDFLAGS_OTHER:INTERNAL=-pthread
-_OPENSSL_LIBDIR:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../lib
+_OPENSSL_LIBDIR:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib
 _OPENSSL_LIBRARIES:INTERNAL=ssl;crypto;dl
-_OPENSSL_LIBRARY_DIRS:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../lib
+_OPENSSL_LIBRARY_DIRS:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib
 _OPENSSL_LIBS:INTERNAL=
 _OPENSSL_LIBS_L:INTERNAL=
 _OPENSSL_LIBS_OTHER:INTERNAL=
 _OPENSSL_LIBS_PATHS:INTERNAL=
 _OPENSSL_MODULE_NAME:INTERNAL=openssl
-_OPENSSL_PREFIX:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../..
-_OPENSSL_STATIC_CFLAGS:INTERNAL=-I/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../include
+_OPENSSL_PREFIX:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../..
+_OPENSSL_STATIC_CFLAGS:INTERNAL=-I/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
 _OPENSSL_STATIC_CFLAGS_I:INTERNAL=
 _OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
-_OPENSSL_STATIC_INCLUDE_DIRS:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../include
-_OPENSSL_STATIC_LDFLAGS:INTERNAL=-L/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../lib;-lssl;-lcrypto;-ldl;-pthread
+_OPENSSL_STATIC_INCLUDE_DIRS:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+_OPENSSL_STATIC_LDFLAGS:INTERNAL=-L/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib;-lssl;-lcrypto;-ldl;-pthread
 _OPENSSL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
 _OPENSSL_STATIC_LIBDIR:INTERNAL=
 _OPENSSL_STATIC_LIBRARIES:INTERNAL=ssl;crypto;dl
-_OPENSSL_STATIC_LIBRARY_DIRS:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../lib
+_OPENSSL_STATIC_LIBRARY_DIRS:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib
 _OPENSSL_STATIC_LIBS:INTERNAL=
 _OPENSSL_STATIC_LIBS_L:INTERNAL=
 _OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
@@ -621,5 +621,5 @@ pkgcfg_lib__OPENSSL_crypto-ADVANCED:INTERNAL=1
 pkgcfg_lib__OPENSSL_dl-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib__OPENSSL_ssl
 pkgcfg_lib__OPENSSL_ssl-ADVANCED:INTERNAL=1
-prefix_result:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/lib/pkgconfig/../../lib
+prefix_result:INTERNAL=/home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib
 

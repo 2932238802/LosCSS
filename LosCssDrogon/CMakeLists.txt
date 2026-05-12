@@ -10,7 +10,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(Drogon CONFIG REQUIRED)
 
 file(
-    GLOB SRC_FILES
+    GLOB_RECURSE SRC_FILES
     ${CMAKE_SOURCE_DIR}/src/main.cc
     ${CMAKE_SOURCE_DIR}/src/*.cc
     ${CMAKE_SOURCE_DIR}/src/*.h

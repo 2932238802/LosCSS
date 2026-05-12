@@ -129,6 +129,54 @@ LosCssDrogon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/build
 .PHONY : LosCssDrogon/fast
 
+src/controllers/HealthController/HealthController.o: src/controllers/HealthController/HealthController.cc.o
+.PHONY : src/controllers/HealthController/HealthController.o
+
+# target to build an object file
+src/controllers/HealthController/HealthController.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o
+.PHONY : src/controllers/HealthController/HealthController.cc.o
+
+src/controllers/HealthController/HealthController.i: src/controllers/HealthController/HealthController.cc.i
+.PHONY : src/controllers/HealthController/HealthController.i
+
+# target to preprocess a source file
+src/controllers/HealthController/HealthController.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.i
+.PHONY : src/controllers/HealthController/HealthController.cc.i
+
+src/controllers/HealthController/HealthController.s: src/controllers/HealthController/HealthController.cc.s
+.PHONY : src/controllers/HealthController/HealthController.s
+
+# target to generate assembly for a file
+src/controllers/HealthController/HealthController.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.s
+.PHONY : src/controllers/HealthController/HealthController.cc.s
+
+src/core/LosResponse/LosResponse.o: src/core/LosResponse/LosResponse.cc.o
+.PHONY : src/core/LosResponse/LosResponse.o
+
+# target to build an object file
+src/core/LosResponse/LosResponse.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o
+.PHONY : src/core/LosResponse/LosResponse.cc.o
+
+src/core/LosResponse/LosResponse.i: src/core/LosResponse/LosResponse.cc.i
+.PHONY : src/core/LosResponse/LosResponse.i
+
+# target to preprocess a source file
+src/core/LosResponse/LosResponse.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.i
+.PHONY : src/core/LosResponse/LosResponse.cc.i
+
+src/core/LosResponse/LosResponse.s: src/core/LosResponse/LosResponse.cc.s
+.PHONY : src/core/LosResponse/LosResponse.s
+
+# target to generate assembly for a file
+src/core/LosResponse/LosResponse.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.s
+.PHONY : src/core/LosResponse/LosResponse.cc.s
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... LosCssDrogon"
+	@echo "... src/controllers/HealthController/HealthController.o"
+	@echo "... src/controllers/HealthController/HealthController.i"
+	@echo "... src/controllers/HealthController/HealthController.s"
+	@echo "... src/core/LosResponse/LosResponse.o"
+	@echo "... src/core/LosResponse/LosResponse.i"
+	@echo "... src/core/LosResponse/LosResponse.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

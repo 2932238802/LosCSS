@@ -65,3 +65,6 @@ LosCssWC/project.private.config.json
 *.tmp
 *.temp
 .cache/
+
+_build
+_build/

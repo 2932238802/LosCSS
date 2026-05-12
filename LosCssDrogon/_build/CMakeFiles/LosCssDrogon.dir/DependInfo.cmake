@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/HealthController/HealthController.cc" "CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o" "gcc" "CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o.d"
+  "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/core/LosResponse/LosResponse.cc" "CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o" "gcc" "CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o.d"
   "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/main.cc" "CMakeFiles/LosCssDrogon.dir/src/main.cc.o" "gcc" "CMakeFiles/LosCssDrogon.dir/src/main.cc.o.d"
   )
 
