@@ -15,7 +15,9 @@ export const modules = {
   seedSources: {
     title: '种源管理',
     description: '管理种源编号、品种、来源、质检报告、供应商与状态',
-    baseApi: '/seed_sources',
+// 【修改开始】
+    baseApi: '/seed-sources',
+// 【修改结束】
     idField: 'id',
     defaultForm: {
       id: null,
@@ -68,10 +70,6 @@ export const modules = {
   },
 
 
-
-  /**
-   * 
-   */
   seedlings: {
     title: '育苗管理',
     description: '管理种源育苗、发芽率、生长状态、育苗时间、方法和环境参数',

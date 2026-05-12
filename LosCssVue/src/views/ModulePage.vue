@@ -2,7 +2,16 @@
   <div class="module-page">
     <el-card shadow="never" class="toolbar-card">
       <div class="toolbar-row">
-        <div>
+        <div class="toolbar-title-block">
+          <el-button
+            :icon="HomeFilled"
+            size="small"
+            plain
+            class="back-home-btn"
+            @click="goHome"
+          >
+            返回首页
+          </el-button>
           <h3>{{ config.title }}</h3>
           <p>{{ config.description }}</p>
         </div>
@@ -112,6 +121,8 @@
 <script setup>
 import { computed, reactive, ref, watch } from "vue";
 import { ElMessage, ElMessageBox } from "element-plus";
+import { useRouter } from "vue-router";
+import { HomeFilled } from "@element-plus/icons-vue";
 import { modules } from "../stores/modules";
 import {
   seedSourceApi,
@@ -130,6 +141,11 @@ const props = defineProps({
     required: true,
   },
 });
+
+const router = useRouter();
+function goHome() {
+  router.push("/");
+}
 
 const apiMap = {
   seedSources: seedSourceApi,
@@ -160,7 +176,6 @@ const dialogTitle = computed(
 const filteredList = computed(() => {
   const term = keyword.value.trim().toLowerCase();
   if (!term) return list.value;
-
   return list.value.filter((item) =>
     Object.values(item || {}).some((value) =>
       String(value ?? "")
@@ -287,3 +302,31 @@ watch(
   { immediate: true },
 );
 </script>
+
+<!-- 【修改开始】 -->
+<style scoped>
+.toolbar-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.back-home-btn {
+  align-self: flex-start;
+  margin-bottom: 4px;
+}
+
+.toolbar-title-block h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.toolbar-title-block p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+</style>
+<!-- 【修改结束】 -->

@@ -39,6 +39,6 @@ const menus = moduleMenus;
 const currentTitle = computed(() => route.meta?.title || 'LosCSS 管理后台');
 const currentDescription = computed(() => {
   const match = Object.values(modules).find((item) => item.title === route.meta?.title);
-  return match?.description || '集中管理农业业务全链路模块。';
+  return match?.description || '集中管理农业业务全链路模块';
 });
 </script>

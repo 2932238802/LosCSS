@@ -1,10 +1,11 @@
 import request from './request'
+import { modules } from '../stores/modules'
 
 /**
- * createCrudApi 
- * 
- * @param {*} baseUrl 
- * @returns 
+ * createCrudApi
+ *
+ * @param {*} baseUrl
+ * @returns
  */
 export function createCrudApi(baseUrl) {
   return {
@@ -26,11 +27,15 @@ export function createCrudApi(baseUrl) {
   }
 }
 
-export const seedSourceApi = createCrudApi('/seed-sources')
-export const seedlingApi = createCrudApi('/seedlings')
-export const plantingAreaApi = createCrudApi('/planting-areas')
-export const farmingOperationApi = createCrudApi('/farming-operations')
-export const harvestApi = createCrudApi('/harvests')
-export const rawMaterialInApi = createCrudApi('/raw-material-ins')
-export const processingFlowApi = createCrudApi('/processing-flows')
-export const qualityCheckApi = createCrudApi('/quality-checks')
+export const apiMap = Object.fromEntries(
+  Object.entries(modules).map(([key, cfg]) => [key, createCrudApi(cfg.baseApi)])
+)
+
+export const seedSourceApi = apiMap.seedSources
+export const seedlingApi = apiMap.seedlings
+export const plantingAreaApi = apiMap.plantingAreas
+export const farmingOperationApi = apiMap.farmingOperations
+export const harvestApi = apiMap.harvests
+export const rawMaterialInApi = apiMap.rawMaterialIns
+export const processingFlowApi = apiMap.processingFlows
+export const qualityCheckApi = apiMap.qualityChecks
