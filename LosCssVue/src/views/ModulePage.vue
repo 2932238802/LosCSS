@@ -51,7 +51,11 @@
           :prop="column.field"
           :label="column.label"
           min-width="140"
-        />
+        >
+          <template #default="scope">
+            {{ formatForeignCell(scope.row, column) }}
+          </template>
+        </el-table-column>
         <el-table-column label="操作" width="180" fixed="right">
           <template #default="scope">
             <el-button size="small" @click="openEditDialog(scope.row)"
@@ -77,12 +81,15 @@
               <el-input
                 v-if="
                   !field.type ||
-                  ['text', 'number', 'date', 'datetime-local'].includes(
+                  ['text', 'number', 'decimal', 'date', 'datetime-local'].includes(
                     field.type,
                   )
                 "
                 v-model="formModel[field.field]"
                 :type="mapInputType(field.type)"
+                :min="field.min"
+                :max="field.max"
+                :step="field.step"
               />
               <el-input
                 v-else-if="field.type === 'textarea'"
@@ -100,6 +107,21 @@
                   :key="option"
                   :label="option"
                   :value="option"
+                />
+              </el-select>
+              <el-select
+                v-else-if="field.type === 'foreign'"
+                v-model="formModel[field.field]"
+                filterable
+                clearable
+                placeholder="请选择"
+                style="width: 100%"
+              >
+                <el-option
+                  v-for="opt in foreignOptionsMap[field.ref] || []"
+                  :key="opt.id"
+                  :value="opt.id"
+                  :label="opt[field.refLabel] || `#${opt.id}`"
                 />
               </el-select>
               <el-input v-else v-model="formModel[field.field]" />
@@ -167,6 +189,10 @@ const errorMessage = ref("");
 const list = ref([]);
 const formModel = reactive({});
 
+// 外键候选项缓存：{ seedSources: [{id, sourceName, ...}], plantingAreas: [...] }
+// 当字段元数据有 type='foreign' + ref 时，会从这里取下拉选项
+const foreignOptionsMap = reactive({});
+
 const config = computed(() => modules[props.moduleKey]);
 const currentApi = computed(() => apiMap[props.moduleKey]);
 const dialogTitle = computed(
@@ -194,8 +220,11 @@ function resetForm() {
 }
 
 function normalizeListPayload(payload) {
-  if (Array.isArray(payload)) return payload;
+  // 拦截器已经剥到 body.data：标准列表结构是 { items, total, page, pageSize }
   if (Array.isArray(payload?.items)) return payload.items;
+  // 兼容退化情况：直接是数组
+  if (Array.isArray(payload)) return payload;
+  // 兼容旧格式：{ data: [...] }
   if (Array.isArray(payload?.data)) return payload.data;
   return [];
 }
@@ -209,17 +238,63 @@ async function loadList() {
     list.value = normalizeListPayload(response);
   } catch (error) {
     console.error(error);
-    errorMessage.value = `${config.value.title}列表加载失败，请检查后端接口或代理配置。`;
+    const reason = error?.message || "未知错误";
+    errorMessage.value = `${config.value.title}列表加载失败：${reason}`;
     list.value = [];
   } finally {
     loading.value = false;
   }
 }
 
+/**
+ * 拉取所有 foreign 字段引用模块的列表，缓存到 foreignOptionsMap
+ * 例如：seedlings 模块有 seedId 引用 seedSources，就会把 seedSources 的列表拉下来
+ */
+async function loadForeignOptions() {
+  const fields = config.value.fields || [];
+  const refKeys = new Set(
+    fields.filter((f) => f.type === "foreign" && f.ref).map((f) => f.ref),
+  );
+
+  for (const refKey of refKeys) {
+    const refApi = apiMap[refKey];
+    if (!refApi) continue;
+    try {
+      // 拉一页较多的数据用作下拉，足够覆盖大多数业务量
+      const resp = await refApi.list({ page: 1, pageSize: 200 });
+      foreignOptionsMap[refKey] = normalizeListPayload(resp);
+    } catch (error) {
+      console.error(`加载外键模块 ${refKey} 列表失败：`, error);
+      foreignOptionsMap[refKey] = [];
+    }
+  }
+}
+
+/**
+ * 把外键 id 渲染成对应的"业务名称"，用于列表表格显示
+ * 业务约定：用户看到的是名称，不暴露内部 id
+ */
+function formatForeignCell(row, column) {
+  const fieldDef = (config.value.fields || []).find(
+    (f) => f.field === column.field,
+  );
+  if (!fieldDef || fieldDef.type !== "foreign") {
+    return row[column.field];
+  }
+  const id = row[column.field];
+  if (id === null || id === undefined || id === "") return "";
+  const list = foreignOptionsMap[fieldDef.ref] || [];
+  const matched = list.find((item) => item.id === id);
+  if (!matched) return `# ${id}（已删除）`;
+  return matched[fieldDef.refLabel] ?? `# ${id}`;
+}
+
 function openCreateDialog() {
   resetForm();
   isEditing.value = false;
   dialogVisible.value = true;
+  // 打开新增对话框时，刷新外键候选列表，保证下拉拿到最新数据
+  loadForeignOptions();
 }
 
 function openEditDialog(row) {
@@ -227,10 +302,54 @@ function openEditDialog(row) {
   Object.assign(formModel, JSON.parse(JSON.stringify(row)));
   isEditing.value = true;
   dialogVisible.value = true;
+  loadForeignOptions();
 }
 
 function buildSubmitPayload() {
-  return JSON.parse(JSON.stringify(formModel));
+  // 深拷贝表单值，并清理空值 + 类型修正 + 范围校验
+  // 业务约定：'' / null / undefined 表示"用户没填"，从请求体里剔除，
+  // 让后端走 NULL 或默认值；而 0、false 是合法输入要保留。
+  const raw = JSON.parse(JSON.stringify(formModel));
+
+  // type='number' 的字段对应数据库 INT 列，C++ 端是 int32_t，必须发数字
+  // type='decimal' 的字段对应数据库 DECIMAL 列，Drogon 把它映射成 std::string，必须发字符串
+  // （Element Plus el-input 不论 type 是什么，v-model 默认都绑成字符串）
+  const fieldMap = new Map();
+  for (const f of config.value.fields || []) {
+    fieldMap.set(f.field, f);
+  }
+
+  const payload = {};
+  for (const [k, v] of Object.entries(raw)) {
+    if (v === "" || v === null || v === undefined) continue;
+
+    const field = fieldMap.get(k);
+    const type = field?.type;
+
+    if (type === "number" || type === "decimal" || type === "foreign") {
+      const n = Number(v);
+      if (Number.isNaN(n)) continue;
+
+      // 范围校验（foreign 也复用这套）
+      if (field?.min !== undefined && n < field.min) {
+        throw new Error(`「${field.label}」不能小于 ${field.min}`);
+      }
+      if (field?.max !== undefined && n > field.max) {
+        throw new Error(`「${field.label}」不能大于 ${field.max}`);
+      }
+
+      // INT / 外键 id 字段必须是整数
+      if ((type === "number" || type === "foreign") && !Number.isInteger(n)) {
+        throw new Error(`「${field.label}」必须是整数`);
+      }
+
+      payload[k] = type === "decimal" ? String(v) : n;
+      continue;
+    }
+
+    payload[k] = v;
+  }
+  return payload;
 }
 
 async function submitForm() {
@@ -239,6 +358,9 @@ async function submitForm() {
     const payload = buildSubmitPayload();
     const idField = config.value.idField || "id";
     const id = payload[idField];
+
+    // 临时调试：打印实际提交的 payload（可在浏览器 console 查看）
+    console.log("[submitForm] module:", props.moduleKey, "payload:", JSON.parse(JSON.stringify(payload)));
 
     if (isEditing.value && id !== null && id !== undefined && id !== "") {
       await currentApi.value.update(id, payload);
@@ -253,7 +375,8 @@ async function submitForm() {
     await loadList();
   } catch (error) {
     console.error(error);
-    ElMessage.error("保存失败，请检查接口参数是否与后端一致");
+    const msg = error?.message || "保存失败";
+    ElMessage.error(msg);
   } finally {
     saving.value = false;
   }
@@ -281,13 +404,15 @@ async function removeItem(row) {
   } catch (error) {
     if (error === "cancel" || error === "close") return;
     console.error(error);
-    ElMessage.error("删除失败，请检查接口是否支持该删除路径");
+    const msg = error?.message || "删除失败";
+    ElMessage.error(msg);
   }
 }
 
 function mapInputType(type) {
   if (type === "datetime-local") return "datetime-local";
   if (type === "number") return "number";
+  if (type === "decimal") return "number";
   if (type === "date") return "date";
   return "text";
 }
@@ -298,6 +423,7 @@ watch(
     keyword.value = "";
     resetForm();
     loadList();
+    loadForeignOptions();
   },
   { immediate: true },
 );

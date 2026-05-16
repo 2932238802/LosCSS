@@ -55,7 +55,7 @@ export const modules = {
       { label: '品种名称', field: 'varietyName', required: true },
       { label: '地理标志', field: 'geographicIndication' },
       { label: '引种日期', field: 'introductionDate', type: 'date', required: true },
-      { label: '数量', field: 'quantity', type: 'decimal', required: true },
+      { label: '数量', field: 'quantity', type: 'number', required: true },
       { label: '单位', field: 'unit', type: 'select', required: true, options: ['公斤', '株', '克'] },
       { label: '质量等级', field: 'qualityGrade', type: 'select', required: true, options: ['特级', '一级', '二级', '三级'] },
       { label: '检疫报告', field: 'quarantineReport' },
@@ -88,15 +88,16 @@ export const modules = {
       operator: ''
     },
     columns: [
-      { label: '种源名称', field: 'seedId' },
+      { label: 'ID', field: 'id' },
+      { label: '种源ID', field: 'seedId' },
       { label: '发芽率', field: 'germinationRate' },
       { label: '生长状态', field: 'growthStatus' },
       { label: '种植日期', field: 'plantDate' },
       { label: '操作者', field: 'operator' }
     ],
     fields: [
-      { label: '种源名称', field: 'seedId', type: 'foreign', required: true, ref: 'seedSources', refLabel: 'sourceName' },
-      { label: '发芽率', field: 'germinationRate', type: 'decimal' },
+      { label: '种源ID', field: 'seedId', type: 'number', required: true },
+      { label: '发芽率', field: 'germinationRate', type: 'number' },
       { label: '生长状态', field: 'growthStatus', type: 'select', required: true, options: ['准备中', '育苗中', '完成'] },
       { label: '种植日期', field: 'plantDate', type: 'date', required: true },
       { label: '育苗开始时间', field: 'startTime', type: 'datetime-local' },
@@ -122,7 +123,7 @@ export const modules = {
     fields: [
       { label: '地块名称', field: 'areaName', required: true },
       { label: '土壤类型', field: 'soilType', type: 'select', required: true, options: ['沙土', '壤土', '粘土'] },
-      { label: '面积(亩)', field: 'size', type: 'decimal', required: true },
+      { label: '面积(亩)', field: 'size', type: 'number', required: true },
       { label: '地理位置', field: 'location', required: true },
       { label: '地块状态', field: 'status', type: 'select', required: true, options: ['空闲', '种植中', '休耕'] },
       { label: '描述', field: 'description', type: 'textarea' }
@@ -135,7 +136,7 @@ export const modules = {
     idField: 'id',
     defaultForm: { id: null, areaId: null, operationType: '施肥', operationDate: new Date().toISOString().slice(0, 10), operatorId: null, materialUsed: '', status: '计划中', resultDescription: '', reviewStatus: '待审核' },
     columns: [
-      { label: '地块名称', field: 'areaId' },
+      { label: '地块ID', field: 'areaId' },
       { label: '操作类型', field: 'operationType' },
       { label: '操作日期', field: 'operationDate' },
       { label: '操作人员', field: 'operatorId' },
@@ -143,7 +144,7 @@ export const modules = {
       { label: '审核状态', field: 'reviewStatus' }
     ],
     fields: [
-      { label: '关联地块', field: 'areaId', type: 'foreign', required: true, ref: 'plantingAreas', refLabel: 'areaName' },
+      { label: '关联地块ID', field: 'areaId', type: 'number', required: true, min: 1 },
       { label: '操作类型', field: 'operationType', type: 'select', required: true, options: ['施肥', '灌溉', '除草', '病虫害防治'] },
       { label: '操作日期', field: 'operationDate', type: 'date', required: true },
       { label: '操作人员ID', field: 'operatorId', type: 'number', required: true, min: 1 },
@@ -169,7 +170,7 @@ export const modules = {
       { label: '质检状态', field: 'inspectionStatus' }
     ],
     fields: [
-      { label: '种植地块', field: 'areaId', type: 'foreign', required: true, ref: 'plantingAreas', refLabel: 'areaName' },
+      { label: '种植地块ID', field: 'areaId', type: 'number', required: true },
       { label: '采收日期', field: 'harvestDate', type: 'date', required: true },
       { label: '批次号', field: 'batchNumber', required: true },
       { label: '采收数量(kg)', field: 'outputQuantity', type: 'decimal', required: true, min: 0 },
