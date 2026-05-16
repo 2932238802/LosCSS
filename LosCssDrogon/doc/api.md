@@ -51,7 +51,7 @@
 ```json
 {
   "code": 0,
-  "message": "ok",
+  "message": "success",
   "data": {}
 }
 ```
@@ -230,7 +230,7 @@
 ```json
 {
   "code": 0,
-  "message": "ok",
+  "message": "success",
   "data": {
     "items": [
       {
@@ -294,7 +294,7 @@
 ```json
 {
   "code": 0,
-  "message": "ok",
+  "message": "success",
   "data": {
     "id": 2,
     "sourceCode": "SS-002",

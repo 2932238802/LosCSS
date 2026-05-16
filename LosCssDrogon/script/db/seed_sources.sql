@@ -1,7 +1,3 @@
-
--- 测试 数据 
-
-
 TRUNCATE TABLE seed_sources RESTART IDENTITY CASCADE;
 
 INSERT INTO seed_sources (source_code, source_name, source_type, variety_name,

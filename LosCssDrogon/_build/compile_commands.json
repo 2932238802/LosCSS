@@ -1,20 +1,122 @@
 [
 {
   "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/common/utils/LosJson.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/common/utils/LosJson.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/common/utils/LosJson.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/common/utils/LosJson.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/controllers/FarmingOperationController/FarmingOperationController.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/FarmingOperationController/FarmingOperationController.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/FarmingOperationController/FarmingOperationController.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/controllers/FarmingOperationController/FarmingOperationController.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/controllers/HarvestController/HarvestController.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/HarvestController/HarvestController.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/HarvestController/HarvestController.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/controllers/HarvestController/HarvestController.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
   "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/HealthController/HealthController.cc",
   "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/HealthController/HealthController.cc",
   "output": "CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.o"
 },
 {
   "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
-  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/core/LosResponse/LosResponse.cc",
-  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/core/LosResponse/LosResponse.cc",
-  "output": "CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o"
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/controllers/PlantingAreaController/PlantingAreaController.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/PlantingAreaController/PlantingAreaController.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/PlantingAreaController/PlantingAreaController.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/controllers/PlantingAreaController/PlantingAreaController.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/controllers/ProcessingFlowController/ProcessingFlowController.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/ProcessingFlowController/ProcessingFlowController.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/ProcessingFlowController/ProcessingFlowController.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/controllers/ProcessingFlowController/ProcessingFlowController.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/controllers/QualityCheckController/QualityCheckController.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/QualityCheckController/QualityCheckController.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/QualityCheckController/QualityCheckController.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/controllers/QualityCheckController/QualityCheckController.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/controllers/RawMaterialInController/RawMaterialInController.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/RawMaterialInController/RawMaterialInController.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/RawMaterialInController/RawMaterialInController.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/controllers/RawMaterialInController/RawMaterialInController.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/controllers/SeedSourceController/SeedSourceController.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/SeedSourceController/SeedSourceController.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/SeedSourceController/SeedSourceController.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/controllers/SeedSourceController/SeedSourceController.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/controllers/SeedlingController/SeedlingController.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/SeedlingController/SeedlingController.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/controllers/SeedlingController/SeedlingController.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/controllers/SeedlingController/SeedlingController.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/dto/LosResponse/LosResponse.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/dto/LosResponse/LosResponse.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/dto/LosResponse/LosResponse.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/dto/LosResponse/LosResponse.cc.o"
 },
 {
   "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
   "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/main.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/main.cc",
   "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/main.cc",
   "output": "CMakeFiles/LosCssDrogon.dir/src/main.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/models/FarmingOperations.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/FarmingOperations.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/FarmingOperations.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/models/FarmingOperations.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/models/Harvests.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/Harvests.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/Harvests.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/models/Harvests.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/models/PlantingAreas.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/PlantingAreas.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/PlantingAreas.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/models/PlantingAreas.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/models/ProcessingFlows.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/ProcessingFlows.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/ProcessingFlows.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/models/ProcessingFlows.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/models/QualityChecks.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/QualityChecks.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/QualityChecks.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/models/QualityChecks.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/models/RawMaterialIns.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/RawMaterialIns.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/RawMaterialIns.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/models/RawMaterialIns.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/models/SeedSources.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/SeedSources.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/SeedSources.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/models/SeedSources.cc.o"
+},
+{
+  "directory": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/_build",
+  "command": "/usr/bin/c++  -I/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src -isystem /home/losangelous/LosAngelous/dev/vcpkg/installed/x64-linux/include -g -std=c++20 -o CMakeFiles/LosCssDrogon.dir/src/models/Seedlings.cc.o -c /home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/Seedlings.cc",
+  "file": "/home/losangelous/LosAngelous/Project/LosCSS/LosCssDrogon/src/models/Seedlings.cc",
+  "output": "CMakeFiles/LosCssDrogon.dir/src/models/Seedlings.cc.o"
 }
 ]

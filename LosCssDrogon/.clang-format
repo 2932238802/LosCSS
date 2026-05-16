@@ -1,0 +1,4 @@
+Language: Cpp
+BasedOnStyle: LLVM
+MaxEmptyLinesToKeep: 3
+ColumnLimit: 100

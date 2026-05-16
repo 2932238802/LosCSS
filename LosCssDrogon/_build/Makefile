@@ -129,6 +129,78 @@ LosCssDrogon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/build
 .PHONY : LosCssDrogon/fast
 
+src/common/utils/LosJson.o: src/common/utils/LosJson.cc.o
+.PHONY : src/common/utils/LosJson.o
+
+# target to build an object file
+src/common/utils/LosJson.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/common/utils/LosJson.cc.o
+.PHONY : src/common/utils/LosJson.cc.o
+
+src/common/utils/LosJson.i: src/common/utils/LosJson.cc.i
+.PHONY : src/common/utils/LosJson.i
+
+# target to preprocess a source file
+src/common/utils/LosJson.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/common/utils/LosJson.cc.i
+.PHONY : src/common/utils/LosJson.cc.i
+
+src/common/utils/LosJson.s: src/common/utils/LosJson.cc.s
+.PHONY : src/common/utils/LosJson.s
+
+# target to generate assembly for a file
+src/common/utils/LosJson.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/common/utils/LosJson.cc.s
+.PHONY : src/common/utils/LosJson.cc.s
+
+src/controllers/FarmingOperationController/FarmingOperationController.o: src/controllers/FarmingOperationController/FarmingOperationController.cc.o
+.PHONY : src/controllers/FarmingOperationController/FarmingOperationController.o
+
+# target to build an object file
+src/controllers/FarmingOperationController/FarmingOperationController.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/FarmingOperationController/FarmingOperationController.cc.o
+.PHONY : src/controllers/FarmingOperationController/FarmingOperationController.cc.o
+
+src/controllers/FarmingOperationController/FarmingOperationController.i: src/controllers/FarmingOperationController/FarmingOperationController.cc.i
+.PHONY : src/controllers/FarmingOperationController/FarmingOperationController.i
+
+# target to preprocess a source file
+src/controllers/FarmingOperationController/FarmingOperationController.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/FarmingOperationController/FarmingOperationController.cc.i
+.PHONY : src/controllers/FarmingOperationController/FarmingOperationController.cc.i
+
+src/controllers/FarmingOperationController/FarmingOperationController.s: src/controllers/FarmingOperationController/FarmingOperationController.cc.s
+.PHONY : src/controllers/FarmingOperationController/FarmingOperationController.s
+
+# target to generate assembly for a file
+src/controllers/FarmingOperationController/FarmingOperationController.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/FarmingOperationController/FarmingOperationController.cc.s
+.PHONY : src/controllers/FarmingOperationController/FarmingOperationController.cc.s
+
+src/controllers/HarvestController/HarvestController.o: src/controllers/HarvestController/HarvestController.cc.o
+.PHONY : src/controllers/HarvestController/HarvestController.o
+
+# target to build an object file
+src/controllers/HarvestController/HarvestController.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/HarvestController/HarvestController.cc.o
+.PHONY : src/controllers/HarvestController/HarvestController.cc.o
+
+src/controllers/HarvestController/HarvestController.i: src/controllers/HarvestController/HarvestController.cc.i
+.PHONY : src/controllers/HarvestController/HarvestController.i
+
+# target to preprocess a source file
+src/controllers/HarvestController/HarvestController.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/HarvestController/HarvestController.cc.i
+.PHONY : src/controllers/HarvestController/HarvestController.cc.i
+
+src/controllers/HarvestController/HarvestController.s: src/controllers/HarvestController/HarvestController.cc.s
+.PHONY : src/controllers/HarvestController/HarvestController.s
+
+# target to generate assembly for a file
+src/controllers/HarvestController/HarvestController.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/HarvestController/HarvestController.cc.s
+.PHONY : src/controllers/HarvestController/HarvestController.cc.s
+
 src/controllers/HealthController/HealthController.o: src/controllers/HealthController/HealthController.cc.o
 .PHONY : src/controllers/HealthController/HealthController.o
 
@@ -153,29 +225,173 @@ src/controllers/HealthController/HealthController.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/HealthController/HealthController.cc.s
 .PHONY : src/controllers/HealthController/HealthController.cc.s
 
-src/core/LosResponse/LosResponse.o: src/core/LosResponse/LosResponse.cc.o
-.PHONY : src/core/LosResponse/LosResponse.o
+src/controllers/PlantingAreaController/PlantingAreaController.o: src/controllers/PlantingAreaController/PlantingAreaController.cc.o
+.PHONY : src/controllers/PlantingAreaController/PlantingAreaController.o
 
 # target to build an object file
-src/core/LosResponse/LosResponse.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.o
-.PHONY : src/core/LosResponse/LosResponse.cc.o
+src/controllers/PlantingAreaController/PlantingAreaController.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/PlantingAreaController/PlantingAreaController.cc.o
+.PHONY : src/controllers/PlantingAreaController/PlantingAreaController.cc.o
 
-src/core/LosResponse/LosResponse.i: src/core/LosResponse/LosResponse.cc.i
-.PHONY : src/core/LosResponse/LosResponse.i
+src/controllers/PlantingAreaController/PlantingAreaController.i: src/controllers/PlantingAreaController/PlantingAreaController.cc.i
+.PHONY : src/controllers/PlantingAreaController/PlantingAreaController.i
 
 # target to preprocess a source file
-src/core/LosResponse/LosResponse.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.i
-.PHONY : src/core/LosResponse/LosResponse.cc.i
+src/controllers/PlantingAreaController/PlantingAreaController.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/PlantingAreaController/PlantingAreaController.cc.i
+.PHONY : src/controllers/PlantingAreaController/PlantingAreaController.cc.i
 
-src/core/LosResponse/LosResponse.s: src/core/LosResponse/LosResponse.cc.s
-.PHONY : src/core/LosResponse/LosResponse.s
+src/controllers/PlantingAreaController/PlantingAreaController.s: src/controllers/PlantingAreaController/PlantingAreaController.cc.s
+.PHONY : src/controllers/PlantingAreaController/PlantingAreaController.s
 
 # target to generate assembly for a file
-src/core/LosResponse/LosResponse.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/core/LosResponse/LosResponse.cc.s
-.PHONY : src/core/LosResponse/LosResponse.cc.s
+src/controllers/PlantingAreaController/PlantingAreaController.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/PlantingAreaController/PlantingAreaController.cc.s
+.PHONY : src/controllers/PlantingAreaController/PlantingAreaController.cc.s
+
+src/controllers/ProcessingFlowController/ProcessingFlowController.o: src/controllers/ProcessingFlowController/ProcessingFlowController.cc.o
+.PHONY : src/controllers/ProcessingFlowController/ProcessingFlowController.o
+
+# target to build an object file
+src/controllers/ProcessingFlowController/ProcessingFlowController.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/ProcessingFlowController/ProcessingFlowController.cc.o
+.PHONY : src/controllers/ProcessingFlowController/ProcessingFlowController.cc.o
+
+src/controllers/ProcessingFlowController/ProcessingFlowController.i: src/controllers/ProcessingFlowController/ProcessingFlowController.cc.i
+.PHONY : src/controllers/ProcessingFlowController/ProcessingFlowController.i
+
+# target to preprocess a source file
+src/controllers/ProcessingFlowController/ProcessingFlowController.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/ProcessingFlowController/ProcessingFlowController.cc.i
+.PHONY : src/controllers/ProcessingFlowController/ProcessingFlowController.cc.i
+
+src/controllers/ProcessingFlowController/ProcessingFlowController.s: src/controllers/ProcessingFlowController/ProcessingFlowController.cc.s
+.PHONY : src/controllers/ProcessingFlowController/ProcessingFlowController.s
+
+# target to generate assembly for a file
+src/controllers/ProcessingFlowController/ProcessingFlowController.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/ProcessingFlowController/ProcessingFlowController.cc.s
+.PHONY : src/controllers/ProcessingFlowController/ProcessingFlowController.cc.s
+
+src/controllers/QualityCheckController/QualityCheckController.o: src/controllers/QualityCheckController/QualityCheckController.cc.o
+.PHONY : src/controllers/QualityCheckController/QualityCheckController.o
+
+# target to build an object file
+src/controllers/QualityCheckController/QualityCheckController.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/QualityCheckController/QualityCheckController.cc.o
+.PHONY : src/controllers/QualityCheckController/QualityCheckController.cc.o
+
+src/controllers/QualityCheckController/QualityCheckController.i: src/controllers/QualityCheckController/QualityCheckController.cc.i
+.PHONY : src/controllers/QualityCheckController/QualityCheckController.i
+
+# target to preprocess a source file
+src/controllers/QualityCheckController/QualityCheckController.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/QualityCheckController/QualityCheckController.cc.i
+.PHONY : src/controllers/QualityCheckController/QualityCheckController.cc.i
+
+src/controllers/QualityCheckController/QualityCheckController.s: src/controllers/QualityCheckController/QualityCheckController.cc.s
+.PHONY : src/controllers/QualityCheckController/QualityCheckController.s
+
+# target to generate assembly for a file
+src/controllers/QualityCheckController/QualityCheckController.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/QualityCheckController/QualityCheckController.cc.s
+.PHONY : src/controllers/QualityCheckController/QualityCheckController.cc.s
+
+src/controllers/RawMaterialInController/RawMaterialInController.o: src/controllers/RawMaterialInController/RawMaterialInController.cc.o
+.PHONY : src/controllers/RawMaterialInController/RawMaterialInController.o
+
+# target to build an object file
+src/controllers/RawMaterialInController/RawMaterialInController.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/RawMaterialInController/RawMaterialInController.cc.o
+.PHONY : src/controllers/RawMaterialInController/RawMaterialInController.cc.o
+
+src/controllers/RawMaterialInController/RawMaterialInController.i: src/controllers/RawMaterialInController/RawMaterialInController.cc.i
+.PHONY : src/controllers/RawMaterialInController/RawMaterialInController.i
+
+# target to preprocess a source file
+src/controllers/RawMaterialInController/RawMaterialInController.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/RawMaterialInController/RawMaterialInController.cc.i
+.PHONY : src/controllers/RawMaterialInController/RawMaterialInController.cc.i
+
+src/controllers/RawMaterialInController/RawMaterialInController.s: src/controllers/RawMaterialInController/RawMaterialInController.cc.s
+.PHONY : src/controllers/RawMaterialInController/RawMaterialInController.s
+
+# target to generate assembly for a file
+src/controllers/RawMaterialInController/RawMaterialInController.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/RawMaterialInController/RawMaterialInController.cc.s
+.PHONY : src/controllers/RawMaterialInController/RawMaterialInController.cc.s
+
+src/controllers/SeedSourceController/SeedSourceController.o: src/controllers/SeedSourceController/SeedSourceController.cc.o
+.PHONY : src/controllers/SeedSourceController/SeedSourceController.o
+
+# target to build an object file
+src/controllers/SeedSourceController/SeedSourceController.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/SeedSourceController/SeedSourceController.cc.o
+.PHONY : src/controllers/SeedSourceController/SeedSourceController.cc.o
+
+src/controllers/SeedSourceController/SeedSourceController.i: src/controllers/SeedSourceController/SeedSourceController.cc.i
+.PHONY : src/controllers/SeedSourceController/SeedSourceController.i
+
+# target to preprocess a source file
+src/controllers/SeedSourceController/SeedSourceController.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/SeedSourceController/SeedSourceController.cc.i
+.PHONY : src/controllers/SeedSourceController/SeedSourceController.cc.i
+
+src/controllers/SeedSourceController/SeedSourceController.s: src/controllers/SeedSourceController/SeedSourceController.cc.s
+.PHONY : src/controllers/SeedSourceController/SeedSourceController.s
+
+# target to generate assembly for a file
+src/controllers/SeedSourceController/SeedSourceController.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/SeedSourceController/SeedSourceController.cc.s
+.PHONY : src/controllers/SeedSourceController/SeedSourceController.cc.s
+
+src/controllers/SeedlingController/SeedlingController.o: src/controllers/SeedlingController/SeedlingController.cc.o
+.PHONY : src/controllers/SeedlingController/SeedlingController.o
+
+# target to build an object file
+src/controllers/SeedlingController/SeedlingController.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/SeedlingController/SeedlingController.cc.o
+.PHONY : src/controllers/SeedlingController/SeedlingController.cc.o
+
+src/controllers/SeedlingController/SeedlingController.i: src/controllers/SeedlingController/SeedlingController.cc.i
+.PHONY : src/controllers/SeedlingController/SeedlingController.i
+
+# target to preprocess a source file
+src/controllers/SeedlingController/SeedlingController.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/SeedlingController/SeedlingController.cc.i
+.PHONY : src/controllers/SeedlingController/SeedlingController.cc.i
+
+src/controllers/SeedlingController/SeedlingController.s: src/controllers/SeedlingController/SeedlingController.cc.s
+.PHONY : src/controllers/SeedlingController/SeedlingController.s
+
+# target to generate assembly for a file
+src/controllers/SeedlingController/SeedlingController.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/controllers/SeedlingController/SeedlingController.cc.s
+.PHONY : src/controllers/SeedlingController/SeedlingController.cc.s
+
+src/dto/LosResponse/LosResponse.o: src/dto/LosResponse/LosResponse.cc.o
+.PHONY : src/dto/LosResponse/LosResponse.o
+
+# target to build an object file
+src/dto/LosResponse/LosResponse.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/dto/LosResponse/LosResponse.cc.o
+.PHONY : src/dto/LosResponse/LosResponse.cc.o
+
+src/dto/LosResponse/LosResponse.i: src/dto/LosResponse/LosResponse.cc.i
+.PHONY : src/dto/LosResponse/LosResponse.i
+
+# target to preprocess a source file
+src/dto/LosResponse/LosResponse.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/dto/LosResponse/LosResponse.cc.i
+.PHONY : src/dto/LosResponse/LosResponse.cc.i
+
+src/dto/LosResponse/LosResponse.s: src/dto/LosResponse/LosResponse.cc.s
+.PHONY : src/dto/LosResponse/LosResponse.s
+
+# target to generate assembly for a file
+src/dto/LosResponse/LosResponse.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/dto/LosResponse/LosResponse.cc.s
+.PHONY : src/dto/LosResponse/LosResponse.cc.s
 
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
@@ -201,6 +417,198 @@ src/main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
+src/models/FarmingOperations.o: src/models/FarmingOperations.cc.o
+.PHONY : src/models/FarmingOperations.o
+
+# target to build an object file
+src/models/FarmingOperations.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/FarmingOperations.cc.o
+.PHONY : src/models/FarmingOperations.cc.o
+
+src/models/FarmingOperations.i: src/models/FarmingOperations.cc.i
+.PHONY : src/models/FarmingOperations.i
+
+# target to preprocess a source file
+src/models/FarmingOperations.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/FarmingOperations.cc.i
+.PHONY : src/models/FarmingOperations.cc.i
+
+src/models/FarmingOperations.s: src/models/FarmingOperations.cc.s
+.PHONY : src/models/FarmingOperations.s
+
+# target to generate assembly for a file
+src/models/FarmingOperations.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/FarmingOperations.cc.s
+.PHONY : src/models/FarmingOperations.cc.s
+
+src/models/Harvests.o: src/models/Harvests.cc.o
+.PHONY : src/models/Harvests.o
+
+# target to build an object file
+src/models/Harvests.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/Harvests.cc.o
+.PHONY : src/models/Harvests.cc.o
+
+src/models/Harvests.i: src/models/Harvests.cc.i
+.PHONY : src/models/Harvests.i
+
+# target to preprocess a source file
+src/models/Harvests.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/Harvests.cc.i
+.PHONY : src/models/Harvests.cc.i
+
+src/models/Harvests.s: src/models/Harvests.cc.s
+.PHONY : src/models/Harvests.s
+
+# target to generate assembly for a file
+src/models/Harvests.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/Harvests.cc.s
+.PHONY : src/models/Harvests.cc.s
+
+src/models/PlantingAreas.o: src/models/PlantingAreas.cc.o
+.PHONY : src/models/PlantingAreas.o
+
+# target to build an object file
+src/models/PlantingAreas.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/PlantingAreas.cc.o
+.PHONY : src/models/PlantingAreas.cc.o
+
+src/models/PlantingAreas.i: src/models/PlantingAreas.cc.i
+.PHONY : src/models/PlantingAreas.i
+
+# target to preprocess a source file
+src/models/PlantingAreas.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/PlantingAreas.cc.i
+.PHONY : src/models/PlantingAreas.cc.i
+
+src/models/PlantingAreas.s: src/models/PlantingAreas.cc.s
+.PHONY : src/models/PlantingAreas.s
+
+# target to generate assembly for a file
+src/models/PlantingAreas.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/PlantingAreas.cc.s
+.PHONY : src/models/PlantingAreas.cc.s
+
+src/models/ProcessingFlows.o: src/models/ProcessingFlows.cc.o
+.PHONY : src/models/ProcessingFlows.o
+
+# target to build an object file
+src/models/ProcessingFlows.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/ProcessingFlows.cc.o
+.PHONY : src/models/ProcessingFlows.cc.o
+
+src/models/ProcessingFlows.i: src/models/ProcessingFlows.cc.i
+.PHONY : src/models/ProcessingFlows.i
+
+# target to preprocess a source file
+src/models/ProcessingFlows.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/ProcessingFlows.cc.i
+.PHONY : src/models/ProcessingFlows.cc.i
+
+src/models/ProcessingFlows.s: src/models/ProcessingFlows.cc.s
+.PHONY : src/models/ProcessingFlows.s
+
+# target to generate assembly for a file
+src/models/ProcessingFlows.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/ProcessingFlows.cc.s
+.PHONY : src/models/ProcessingFlows.cc.s
+
+src/models/QualityChecks.o: src/models/QualityChecks.cc.o
+.PHONY : src/models/QualityChecks.o
+
+# target to build an object file
+src/models/QualityChecks.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/QualityChecks.cc.o
+.PHONY : src/models/QualityChecks.cc.o
+
+src/models/QualityChecks.i: src/models/QualityChecks.cc.i
+.PHONY : src/models/QualityChecks.i
+
+# target to preprocess a source file
+src/models/QualityChecks.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/QualityChecks.cc.i
+.PHONY : src/models/QualityChecks.cc.i
+
+src/models/QualityChecks.s: src/models/QualityChecks.cc.s
+.PHONY : src/models/QualityChecks.s
+
+# target to generate assembly for a file
+src/models/QualityChecks.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/QualityChecks.cc.s
+.PHONY : src/models/QualityChecks.cc.s
+
+src/models/RawMaterialIns.o: src/models/RawMaterialIns.cc.o
+.PHONY : src/models/RawMaterialIns.o
+
+# target to build an object file
+src/models/RawMaterialIns.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/RawMaterialIns.cc.o
+.PHONY : src/models/RawMaterialIns.cc.o
+
+src/models/RawMaterialIns.i: src/models/RawMaterialIns.cc.i
+.PHONY : src/models/RawMaterialIns.i
+
+# target to preprocess a source file
+src/models/RawMaterialIns.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/RawMaterialIns.cc.i
+.PHONY : src/models/RawMaterialIns.cc.i
+
+src/models/RawMaterialIns.s: src/models/RawMaterialIns.cc.s
+.PHONY : src/models/RawMaterialIns.s
+
+# target to generate assembly for a file
+src/models/RawMaterialIns.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/RawMaterialIns.cc.s
+.PHONY : src/models/RawMaterialIns.cc.s
+
+src/models/SeedSources.o: src/models/SeedSources.cc.o
+.PHONY : src/models/SeedSources.o
+
+# target to build an object file
+src/models/SeedSources.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/SeedSources.cc.o
+.PHONY : src/models/SeedSources.cc.o
+
+src/models/SeedSources.i: src/models/SeedSources.cc.i
+.PHONY : src/models/SeedSources.i
+
+# target to preprocess a source file
+src/models/SeedSources.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/SeedSources.cc.i
+.PHONY : src/models/SeedSources.cc.i
+
+src/models/SeedSources.s: src/models/SeedSources.cc.s
+.PHONY : src/models/SeedSources.s
+
+# target to generate assembly for a file
+src/models/SeedSources.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/SeedSources.cc.s
+.PHONY : src/models/SeedSources.cc.s
+
+src/models/Seedlings.o: src/models/Seedlings.cc.o
+.PHONY : src/models/Seedlings.o
+
+# target to build an object file
+src/models/Seedlings.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/Seedlings.cc.o
+.PHONY : src/models/Seedlings.cc.o
+
+src/models/Seedlings.i: src/models/Seedlings.cc.i
+.PHONY : src/models/Seedlings.i
+
+# target to preprocess a source file
+src/models/Seedlings.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/Seedlings.cc.i
+.PHONY : src/models/Seedlings.cc.i
+
+src/models/Seedlings.s: src/models/Seedlings.cc.s
+.PHONY : src/models/Seedlings.s
+
+# target to generate assembly for a file
+src/models/Seedlings.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LosCssDrogon.dir/build.make CMakeFiles/LosCssDrogon.dir/src/models/Seedlings.cc.s
+.PHONY : src/models/Seedlings.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,15 +618,66 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... LosCssDrogon"
+	@echo "... src/common/utils/LosJson.o"
+	@echo "... src/common/utils/LosJson.i"
+	@echo "... src/common/utils/LosJson.s"
+	@echo "... src/controllers/FarmingOperationController/FarmingOperationController.o"
+	@echo "... src/controllers/FarmingOperationController/FarmingOperationController.i"
+	@echo "... src/controllers/FarmingOperationController/FarmingOperationController.s"
+	@echo "... src/controllers/HarvestController/HarvestController.o"
+	@echo "... src/controllers/HarvestController/HarvestController.i"
+	@echo "... src/controllers/HarvestController/HarvestController.s"
 	@echo "... src/controllers/HealthController/HealthController.o"
 	@echo "... src/controllers/HealthController/HealthController.i"
 	@echo "... src/controllers/HealthController/HealthController.s"
-	@echo "... src/core/LosResponse/LosResponse.o"
-	@echo "... src/core/LosResponse/LosResponse.i"
-	@echo "... src/core/LosResponse/LosResponse.s"
+	@echo "... src/controllers/PlantingAreaController/PlantingAreaController.o"
+	@echo "... src/controllers/PlantingAreaController/PlantingAreaController.i"
+	@echo "... src/controllers/PlantingAreaController/PlantingAreaController.s"
+	@echo "... src/controllers/ProcessingFlowController/ProcessingFlowController.o"
+	@echo "... src/controllers/ProcessingFlowController/ProcessingFlowController.i"
+	@echo "... src/controllers/ProcessingFlowController/ProcessingFlowController.s"
+	@echo "... src/controllers/QualityCheckController/QualityCheckController.o"
+	@echo "... src/controllers/QualityCheckController/QualityCheckController.i"
+	@echo "... src/controllers/QualityCheckController/QualityCheckController.s"
+	@echo "... src/controllers/RawMaterialInController/RawMaterialInController.o"
+	@echo "... src/controllers/RawMaterialInController/RawMaterialInController.i"
+	@echo "... src/controllers/RawMaterialInController/RawMaterialInController.s"
+	@echo "... src/controllers/SeedSourceController/SeedSourceController.o"
+	@echo "... src/controllers/SeedSourceController/SeedSourceController.i"
+	@echo "... src/controllers/SeedSourceController/SeedSourceController.s"
+	@echo "... src/controllers/SeedlingController/SeedlingController.o"
+	@echo "... src/controllers/SeedlingController/SeedlingController.i"
+	@echo "... src/controllers/SeedlingController/SeedlingController.s"
+	@echo "... src/dto/LosResponse/LosResponse.o"
+	@echo "... src/dto/LosResponse/LosResponse.i"
+	@echo "... src/dto/LosResponse/LosResponse.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/models/FarmingOperations.o"
+	@echo "... src/models/FarmingOperations.i"
+	@echo "... src/models/FarmingOperations.s"
+	@echo "... src/models/Harvests.o"
+	@echo "... src/models/Harvests.i"
+	@echo "... src/models/Harvests.s"
+	@echo "... src/models/PlantingAreas.o"
+	@echo "... src/models/PlantingAreas.i"
+	@echo "... src/models/PlantingAreas.s"
+	@echo "... src/models/ProcessingFlows.o"
+	@echo "... src/models/ProcessingFlows.i"
+	@echo "... src/models/ProcessingFlows.s"
+	@echo "... src/models/QualityChecks.o"
+	@echo "... src/models/QualityChecks.i"
+	@echo "... src/models/QualityChecks.s"
+	@echo "... src/models/RawMaterialIns.o"
+	@echo "... src/models/RawMaterialIns.i"
+	@echo "... src/models/RawMaterialIns.s"
+	@echo "... src/models/SeedSources.o"
+	@echo "... src/models/SeedSources.i"
+	@echo "... src/models/SeedSources.s"
+	@echo "... src/models/Seedlings.o"
+	@echo "... src/models/Seedlings.i"
+	@echo "... src/models/Seedlings.s"
 .PHONY : help
 
 

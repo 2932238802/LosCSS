@@ -5,7 +5,16 @@
     "dbname": "los_css_drogon",
     "user": "postgres",
     "passwd": "lsj",
-    "tables": ["seed_sources"],
+    "tables": [
+        "seed_sources",
+        "seedlings",
+        "planting_areas",
+        "farming_operations",
+        "harvests",
+        "raw_material_ins",
+        "processing_flows",
+        "quality_checks"
+    ],
     "relationships": {
         "enabled": false
     },

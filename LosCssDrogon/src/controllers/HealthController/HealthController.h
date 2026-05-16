@@ -5,11 +5,7 @@
 #include <drogon/HttpRequest.h>
 
 namespace LosController {
-
-using LosCommon::LOS_CONST_RES_FUNC;
 using LosCommon::LOS_CONST_STR;
-using LosCommon::LOS_RES;
-using LosCommon::LOS_STATE;
 
 /**
  * @brief HealthController
@@ -19,14 +15,14 @@ using LosCommon::LOS_STATE;
 class HealthController : public drogon::HttpController<HealthController> {
 public:
   METHOD_LIST_BEGIN
-  ADD_METHOD_TO(HealthController::check, LosCommon::LOS_API_STR::HEALTH,
-                drogon::Get);
+  ADD_METHOD_TO(HealthController::check, LosCommon::LOS_API_STR::HEALTH, drogon::Get);
   METHOD_LIST_END
 
 public:
   // 检查是不是正常的
   // LosCommon::LOS_API_STR::HEALTH
-  void check(const drogon::HttpRequestPtr &req, LOS_CONST_RES_FUNC &&callback);
+  void check(const drogon::HttpRequestPtr &req,
+             std::function<void(const drogon::HttpResponsePtr &)> &&callback);
 
 private:
   // 记录 开始时间
